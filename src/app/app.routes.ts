@@ -7,5 +7,9 @@ export const appRoutes: Route[] = [
         pathMatch: 'full',
         title: 'Character Sheet',
         component: CharacterSheetComponent
+    },
+    {
+        path: 'skills',
+        loadChildren: () => import('modules/skills').then(m => m.SkillsModule)
     }
 ];
