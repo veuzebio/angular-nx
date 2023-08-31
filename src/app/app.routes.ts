@@ -9,7 +9,7 @@ export const appRoutes: Route[] = [
     component: CharacterSheetComponent,
   },
   {
-    path: 'skills',
-    loadChildren: () => import('modules/skills').then((m) => m.SkillsModule),
+    path: 'races',
+    loadChildren: () => import('modules/races').then((m) => m.RacesModule),
   },
 ];

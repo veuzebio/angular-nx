@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "modules/races": ["modules/races/src/index.ts"],
+      "modules/shared/models": ["modules/shared/models/src/index.ts"],
       "modules/shared/ui": ["modules/shared/ui/src/index.ts"],
       "modules/skills": ["modules/skills/src/index.ts"]
     }

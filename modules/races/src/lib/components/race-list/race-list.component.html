@@ -1,0 +1,6 @@
+<h1>Races</h1>
+<ng-container *ngIf="races$ | async as races">
+  <ul>
+    <li *ngFor="let race of races">{{ race }}</li>
+  </ul>
+</ng-container>
