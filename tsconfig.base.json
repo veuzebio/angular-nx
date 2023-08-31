@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "modules/races": ["modules/races/src/index.ts"],
       "modules/shared/ui": ["modules/shared/ui/src/index.ts"],
       "modules/skills": ["modules/skills/src/index.ts"]
     }
