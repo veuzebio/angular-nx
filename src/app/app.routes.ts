@@ -5,6 +5,11 @@ export const appRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'full',
+    redirectTo: 'home',
+  },
+  {
+    path: 'home',
+    pathMatch: 'full',
     title: 'Character Sheet',
     component: CharacterSheetComponent,
   },
