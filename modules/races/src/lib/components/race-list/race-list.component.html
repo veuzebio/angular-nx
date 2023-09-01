@@ -1,6 +1,11 @@
 <h1>Races</h1>
 <ng-container *ngIf="races$ | async as races">
   <ul>
-    <li *ngFor="let race of races">{{ race }}</li>
+    <li *ngFor="let race of races">
+      <a [routerLink]="race | lowercase">
+        {{ race }}
+      </a>
+    </li>
   </ul>
 </ng-container>
+<router-outlet></router-outlet>
