@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { ENV } from 'modules/shared/models';
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { CharacterSheetComponent } from './character-sheet/character-sheet.component';
@@ -13,7 +15,7 @@ import { CharacterSheetComponent } from './character-sheet/character-sheet.compo
     HttpClientModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
-  providers: [],
+  providers: [{ provide: ENV, useValue: environment }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

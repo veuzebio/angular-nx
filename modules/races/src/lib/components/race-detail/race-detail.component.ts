@@ -12,7 +12,7 @@ export class RaceDetailComponent {
   detail$!: Observable<Race>;
 
   @Input() set name(param: string) {
-    this.detail$ = this.raceService.getRaceDetail(param);
+    this.detail$ = this.raceService.getRaceDetails(param);
   }
 
   constructor(private raceService: RaceService) {}
