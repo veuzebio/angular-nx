@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map, tap, of, switchMap, iif, filter } from 'rxjs';
+import { Observable, map, tap, of, filter } from 'rxjs';
 import { RacesResponse, RaceDetailResponse } from '../../models';
 import { AppEnvironment } from 'modules/shared/models';
 import { CacheService } from 'modules/shared/services';
