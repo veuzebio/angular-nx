@@ -1,5 +1,3 @@
-export const ENV = 'env';
-
-export interface AppEnvironment {
-  dnd5ApiBasePath: string;
+export abstract class AppEnvironment {
+  abstract dnd5ApiBasePath: string;
 }
