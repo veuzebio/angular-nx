@@ -13,11 +13,7 @@ import { racesRoutes } from './lib.routes';
 import { RaceService } from './services/race/race.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(racesRoutes),
-    SharedServicesModule,
-  ],
+  imports: [CommonModule, RouterModule.forChild(racesRoutes)],
   providers: [
     provideRouter(racesRoutes, withComponentInputBinding()),
     RaceService,
