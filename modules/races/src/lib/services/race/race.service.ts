@@ -4,7 +4,7 @@ import { Observable, map } from 'rxjs';
 import { RacesResponse, RaceDetailResponse } from '../../models';
 import { AppEnvironment } from 'modules/shared/models';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class RaceService {
   constructor(private http: HttpClient, private env: AppEnvironment) {}
 

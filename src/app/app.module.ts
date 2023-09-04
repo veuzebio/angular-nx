@@ -15,7 +15,7 @@ import { SharedServicesModule } from 'modules/shared/services';
   imports: [
     BrowserModule,
     HttpClientModule,
-    SharedServicesModule,
+    SharedServicesModule.forRoot(),
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [

@@ -14,10 +14,7 @@ import { RaceService } from './services/race/race.service';
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(racesRoutes)],
-  providers: [
-    provideRouter(racesRoutes, withComponentInputBinding()),
-    RaceService,
-  ],
+  providers: [provideRouter(racesRoutes, withComponentInputBinding())],
   declarations: [RaceListComponent, RaceDetailComponent],
 })
 export class RacesModule {}
