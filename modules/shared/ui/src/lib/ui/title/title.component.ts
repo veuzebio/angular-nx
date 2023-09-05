@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TitleComponent {
-  @Input() text: string | null = null;
   @Input() textSize: 'default' | 'large' | 'extraLarge' = 'default';
   @Input() textPosition: 'left' | 'center' | 'right' = 'center';
 }

@@ -1,15 +1,15 @@
 <ng-container *ngIf="detail$ | async as detail">
-  <ui-title [text]="detail.name" textSize="large" />
+  <ui-title textSize="large">{{ detail.name }}</ui-title>
 
   <ui-card>
-    <ui-title text="Age" />
+    <ui-title>Age</ui-title>
     <ui-card-content>
       <p>{{ detail.age }}</p>
     </ui-card-content>
   </ui-card>
 
   <ui-card>
-    <ui-title text="Speed" />
+    <ui-title>Speed</ui-title>
     <ui-card-content>
       <p>{{ detail.speed }}</p>
     </ui-card-content>
@@ -17,7 +17,7 @@
 
   <ng-container *ngIf="detail.ability_bonuses.length">
     <ui-card>
-      <ui-title text="Ability Bonuses" />
+      <ui-title>Ability Bonuses</ui-title>
       <ui-card-content>
         <ui-list>
           <ui-list-item *ngFor="let bonus of detail.ability_bonuses">
@@ -29,14 +29,14 @@
   </ng-container>
 
   <ui-card>
-    <ui-title text="Alignment" />
+    <ui-title>Alignment</ui-title>
     <ui-card-content>
       <p>{{ detail.age }}</p>
     </ui-card-content>
   </ui-card>
 
   <ui-card>
-    <ui-title text="{{ detail.size }} Size" />
+    <ui-title>{{ detail.size }} Size</ui-title>
     <ui-card-content>
       <p>{{ detail.size_description }}</p>
     </ui-card-content>
@@ -44,7 +44,7 @@
 
   <ng-container *ngIf="detail.starting_proficiencies.length">
     <ui-card>
-      <ui-title text="Starting Proficiencies" />
+      <ui-title>Starting Proficiencies</ui-title>
       <ui-card-content>
         <ui-list>
           <ui-list-item
@@ -59,7 +59,7 @@
 
   <ng-container *ngIf="detail.languages.length">
     <ui-card>
-      <ui-title text="Languages" />
+      <ui-title>Languages</ui-title>
       <ui-card-content>
         <ui-list>
           <ui-list-item *ngFor="let language of detail.languages">
@@ -73,7 +73,7 @@
 
   <ng-container *ngIf="detail.traits.length">
     <ui-card>
-      <ui-title text="Traits" />
+      <ui-title>Traits</ui-title>
       <ui-card-content>
         <ui-list>
           <ui-list-item *ngFor="let trait of detail.traits">
@@ -86,7 +86,7 @@
 
   <ng-container *ngIf="detail.subraces.length">
     <ui-card>
-      <ui-title text="Subraces" />
+      <ui-title>Subraces</ui-title>
       <ui-card-content>
         <ui-list>
           <ui-list-item *ngFor="let subrace of detail.subraces">
