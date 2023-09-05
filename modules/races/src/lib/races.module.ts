@@ -1,4 +1,10 @@
-import { TitleComponent, CardComponent } from 'modules/shared/ui';
+import {
+  TitleComponent,
+  CardComponent,
+  CardContentComponent,
+  ListComponent,
+  ListItemComponent,
+} from 'modules/shared/ui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
@@ -19,6 +25,9 @@ import {
   imports: [
     TitleComponent,
     CardComponent,
+    CardContentComponent,
+    ListComponent,
+    ListItemComponent,
     CommonModule,
     RouterModule.forChild(racesRoutes),
   ],
