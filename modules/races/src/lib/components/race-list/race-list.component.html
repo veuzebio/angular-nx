@@ -1,14 +1,9 @@
 <ng-container *ngIf="races$ | async as races">
-  <ul class="nav nav-tabs my-3">
-    <li class="nav-item" *ngFor="let race of races">
-      <a
-        class="nav-link"
-        [routerLink]="race | lowercase"
-        routerLinkActive="active"
-      >
+  <ul class="flex flex-col gap-5">
+    <li class="hover:underline underline-offset-8" *ngFor="let race of races">
+      <a class="" [routerLink]="race | lowercase" routerLinkActive="active">
         {{ race }}
       </a>
     </li>
   </ul>
 </ng-container>
-<router-outlet></router-outlet>

@@ -1,3 +1,4 @@
+import { TitleComponent, CardComponent } from 'modules/shared/ui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
@@ -6,15 +7,21 @@ import {
   withComponentInputBinding,
 } from '@angular/router';
 
-import { SharedServicesModule } from 'modules/shared/services';
-import { RaceDetailComponent } from './components/race-detail/race-detail.component';
-import { RaceListComponent } from './components/race-list/race-list.component';
 import { racesRoutes } from './lib.routes';
-import { RaceService } from './services/race/race.service';
+import {
+  RaceDetailComponent,
+  RaceListComponent,
+  RacesPageComponent,
+} from './components';
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(racesRoutes)],
+  declarations: [RacesPageComponent, RaceListComponent, RaceDetailComponent],
+  imports: [
+    TitleComponent,
+    CardComponent,
+    CommonModule,
+    RouterModule.forChild(racesRoutes),
+  ],
   providers: [provideRouter(racesRoutes, withComponentInputBinding())],
-  declarations: [RaceListComponent, RaceDetailComponent],
 })
 export class RacesModule {}

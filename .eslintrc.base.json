@@ -18,7 +18,12 @@
               },
               {
                 "sourceTag": "type:feature",
-                "onlyDependOnLibsWithTags": ["type:feature"]
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:ui",
+                  "type:services",
+                  "type:models"
+                ]
               },
               {
                 "sourceTag": "type:ui",

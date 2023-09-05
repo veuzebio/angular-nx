@@ -6,7 +6,6 @@ import { RaceService } from '../../services/race/race.service';
 @Component({
   selector: 'lib-race-detail',
   templateUrl: './race-detail.component.html',
-  styleUrls: ['./race-detail.component.scss'],
 })
 export class RaceDetailComponent {
   detail$!: Observable<Race>;

@@ -9,10 +9,13 @@ import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { CharacterSheetComponent } from './character-sheet/character-sheet.component';
 import { SharedServicesModule } from 'modules/shared/services';
+import { CardComponent, TitleComponent } from 'modules/shared/ui';
 
 @NgModule({
   declarations: [AppComponent, CharacterSheetComponent],
   imports: [
+    TitleComponent,
+    CardComponent,
     BrowserModule,
     HttpClientModule,
     SharedServicesModule.forRoot(),

@@ -1,0 +1,13 @@
+<h1
+  class="text-center my-2"
+  [ngClass]="{
+    'text-lg': textSize === 'default',
+    'text-5xl': textSize === 'large',
+    'text-9xl': textSize === 'extraLarge',
+    'text-start': textPosition === 'left',
+    'text-center': textPosition === 'center',
+    'text-end': textPosition === 'right',
+  }"
+>
+  {{ text | uppercase }}
+</h1>

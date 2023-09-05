@@ -1,15 +1,17 @@
-<nav class="bg-gray-200">
-  <ul class="px-5 py-3 flex flex-row gap-4">
-    <li class="hover:underline underline-offset-8">
-      <a class="" routerLink="home" routerLinkActive="underline">
-        Character Sheet
-      </a>
-    </li>
-    <li class="hover:underline underline-offset-8">
-      <a class="" routerLink="races" routerLinkActive="underline"> Races </a>
-    </li>
-  </ul>
-</nav>
-<div class="container px-5">
-  <router-outlet></router-outlet>
+<div class="relative">
+  <nav class="bg-gray-200 sticky top-0 left-0 right-0">
+    <ul class="p-5 flex flex-row gap-4">
+      <li class="hover:underline underline-offset-8">
+        <a class="" routerLink="home" routerLinkActive="underline">
+          Character Sheet
+        </a>
+      </li>
+      <li class="hover:underline underline-offset-8">
+        <a class="" routerLink="races" routerLinkActive="underline"> Races </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container p-5">
+    <router-outlet></router-outlet>
+  </div>
 </div>

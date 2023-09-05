@@ -1,79 +1,79 @@
 <ng-container *ngIf="detail$ | async as detail">
-  <h1 class="text-center my-5">{{ detail.name | uppercase }}</h1>
+  <ui-title [text]="detail.name" textSize="large" />
 
-  <div>
-    <h3>Age</h3>
+  <ui-card>
+    <ui-title text="Age" />
     <p>{{ detail.age }}</p>
-  </div>
+  </ui-card>
 
-  <div>
-    <h3>Speed</h3>
+  <ui-card>
+    <ui-title text="Speed" />
     <p>{{ detail.speed }}</p>
-  </div>
+  </ui-card>
 
   <ng-container *ngIf="detail.ability_bonuses.length">
-    <div>
-      <h3>Ability Bonuses</h3>
-      <ul>
+    <ui-card>
+      <ui-title text="Ability Bonuses" />
+      <ul class="flex flex-row gap-6 list-disc list-inside">
         <li *ngFor="let bonus of detail.ability_bonuses">
           {{ bonus.ability_score.name }}
         </li>
       </ul>
-    </div>
+    </ui-card>
   </ng-container>
 
-  <div>
-    <h3>Alignment</h3>
+  <ui-card>
+    <ui-title text="Alignment" />
     <p>{{ detail.age }}</p>
-  </div>
+  </ui-card>
 
-  <div>
-    <h3>{{ detail.size }} Size</h3>
+  <ui-card>
+    <ui-title text="{{ detail.size }} Size" />
     <p>{{ detail.size_description }}</p>
-  </div>
+  </ui-card>
 
   <ng-container *ngIf="detail.starting_proficiencies.length">
-    <div>
-      <h3>Starting Proficiencies</h3>
-      <ul>
+    <ui-card>
+      <ui-title text="Starting Proficiencies" />
+      <ul class="flex flex-row gap-6 list-disc list-inside">
         <li *ngFor="let proficiency of detail.starting_proficiencies">
           {{ proficiency.name }}
         </li>
       </ul>
-    </div>
+    </ui-card>
   </ng-container>
 
   <ng-container *ngIf="detail.languages.length">
-    <div>
-      <h3>Languages</h3>
-      <ul>
+    <ui-card>
+      <ui-title text="Languages" />
+      <ul class="flex flex-row gap-6 list-disc list-inside">
         <li *ngFor="let language of detail.languages">
           {{ language.name }}
         </li>
       </ul>
       <p>{{ detail.language_desc }}</p>
-    </div>
+    </ui-card>
   </ng-container>
 
   <ng-container *ngIf="detail.traits.length">
-    <div>
-      <h3>Traits</h3>
-      <ul>
+    <ui-card>
+      <ui-title text="Traits" />
+      <ul class="flex flex-row gap-6 list-disc list-inside">
         <li *ngFor="let trait of detail.traits">
           {{ trait.name }}
         </li>
       </ul>
-    </div>
+    </ui-card>
   </ng-container>
 
   <ng-container *ngIf="detail.subraces.length">
-    <div>
-      <h3>Subraces</h3>
-      <ul>
+    <ui-card>
+      <ui-title text="Subraces" />
+      <ul class="flex flex-row gap-6 list-disc list-inside">
         <li *ngFor="let subrace of detail.subraces">
           {{ subrace.name }}
         </li>
       </ul>
-    </div>
+    </ui-card>
   </ng-container>
 </ng-container>

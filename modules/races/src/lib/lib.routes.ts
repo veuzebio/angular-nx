@@ -1,12 +1,11 @@
 import { Route } from '@angular/router';
-import { RaceListComponent } from './components/race-list/race-list.component';
-import { RaceDetailComponent } from './components/race-detail/race-detail.component';
+import { RaceDetailComponent, RacesPageComponent } from './components';
 
 export const racesRoutes: Route[] = [
   {
     path: '',
     title: 'Races',
-    component: RaceListComponent,
+    component: RacesPageComponent,
     children: [
       {
         path: ':name',
