@@ -1,1 +1,12 @@
-test
+<ng-container *ngIf="races$ | async as races">
+  <ul class="flex gap-5 justify-between flex-wrap">
+    <li
+      class="bg-red-500 flex-auto w-64 min-w-max h-40 p-3 rounded-lg"
+      *ngFor="let race of races"
+    >
+      <a [routerLink]="['../detail', race | lowercase]">
+        {{ race }}
+      </a>
+    </li>
+  </ul>
+</ng-container>

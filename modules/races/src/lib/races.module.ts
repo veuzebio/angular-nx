@@ -16,12 +16,18 @@ import {
 import { racesRoutes } from './lib.routes';
 import {
   RaceDetailComponent,
+  RaceGridComponent,
   RaceListComponent,
   RacesPageComponent,
 } from './components';
 
 @NgModule({
-  declarations: [RacesPageComponent, RaceListComponent, RaceDetailComponent],
+  declarations: [
+    RacesPageComponent,
+    RaceListComponent,
+    RaceDetailComponent,
+    RaceGridComponent,
+  ],
   imports: [
     TitleComponent,
     CardComponent,

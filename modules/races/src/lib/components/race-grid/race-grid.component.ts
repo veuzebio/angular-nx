@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { RaceService } from '../../services/race/race.service';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'lib-race-grid',
-  templateUrl: 'race-grid.component.html',
+  templateUrl: './race-grid.component.html',
 })
-export class RaceGridComponent implements OnInit {
-  constructor() {}
+export class RaceGridComponent {
+  races$!: Observable<string[]>;
 
-  ngOnInit() {}
+  constructor(private raceService: RaceService) {}
+
+  ngOnInit(): void {
+    this.races$ = this.raceService.getAllRaces();
+  }
 }
