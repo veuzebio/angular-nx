@@ -11,7 +11,7 @@ export class RaceService {
   getAllRaces(): Observable<string[]> {
     return this.http
       .get<RacesResponse>(`${this.env.dnd5ApiBasePath}/races/`)
-      .pipe(map((response) => response.results.map((result) => result.name)));
+      .pipe(map((response) => response.results.map((result) => result.index)));
   }
 
   getRaceDetails(race: string): Observable<RaceDetailResponse> {

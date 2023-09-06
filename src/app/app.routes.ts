@@ -17,4 +17,9 @@ export const appRoutes: Route[] = [
     path: 'races',
     loadChildren: () => import('modules/races').then((m) => m.RacesModule),
   },
+  {
+    path: 'create',
+    loadChildren: () =>
+      import('modules/create-character').then((m) => m.CreateCharacterModule),
+  },
 ];

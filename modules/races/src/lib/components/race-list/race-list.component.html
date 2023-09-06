@@ -3,10 +3,10 @@
     <li *ngFor="let race of races">
       <a
         class="hover:underline underline-offset-8"
-        [routerLink]="race | lowercase"
+        [routerLink]="race"
         routerLinkActive="underline"
       >
-        {{ race }}
+        {{ race | titlecase }}
       </a>
     </li>
   </ul>

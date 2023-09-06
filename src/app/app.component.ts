@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'angular-nx';
+  @HostBinding('class') hostClassAttr = 'h-screen';
 }
