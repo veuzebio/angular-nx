@@ -18,7 +18,7 @@ import { CardComponent, TitleComponent } from 'modules/shared/ui';
     CardComponent,
     BrowserModule,
     HttpClientModule,
-    SharedServicesModule.forRoot(),
+    SharedServicesModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [

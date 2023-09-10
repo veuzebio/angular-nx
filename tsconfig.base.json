@@ -17,11 +17,9 @@
     "paths": {
       "modules/create-character": ["modules/create-character/src/index.ts"],
       "modules/races": ["modules/races/src/index.ts"],
-      "modules/shared/images": ["modules/shared/assets/images"],
       "modules/shared/models": ["modules/shared/models/src/index.ts"],
       "modules/shared/services": ["modules/shared/services/src/index.ts"],
-      "modules/shared/ui": ["modules/shared/ui/src/index.ts"],
-      "modules/skills": ["modules/skills/src/index.ts"]
+      "modules/shared/ui": ["modules/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

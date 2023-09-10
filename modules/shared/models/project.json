@@ -10,10 +10,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "modules/shared/models/**/*.ts",
-          "modules/shared/models/**/*.html"
-        ]
+        "lintFilePatterns": ["modules/shared/models/**/*.ts"]
       }
     }
   }

@@ -1,10 +1,3 @@
-import {
-  TitleComponent,
-  CardComponent,
-  CardContentComponent,
-  ListComponent,
-  ListItemComponent,
-} from 'modules/shared/ui';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
@@ -12,14 +5,21 @@ import {
   provideRouter,
   withComponentInputBinding,
 } from '@angular/router';
+import {
+  CardComponent,
+  CardContentComponent,
+  ListComponent,
+  ListItemComponent,
+  TitleComponent,
+} from 'modules/shared/ui';
 
-import { racesRoutes } from './lib.routes';
 import {
   RaceDetailComponent,
   RaceGridComponent,
   RaceListComponent,
   RacesPageComponent,
 } from './components';
+import { racesRoutes } from './lib.routes';
 
 @NgModule({
   declarations: [

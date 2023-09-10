@@ -1,0 +1,8 @@
+{
+  "name": "modules-shared-assets",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "modules/shared/assets",
+  "prefix": "lib",
+  "tags": ["type:assets", "scope:shared"],
+  "projectType": "library"
+}

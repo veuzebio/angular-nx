@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { RacesResponse, RaceDetailResponse } from '../../models';
 import { AppEnvironment } from 'modules/shared/models';
 
 @Injectable({ providedIn: 'root' })
 export class RaceService {
-  constructor(private http: HttpClient, private env: AppEnvironment) {}
+  private env = inject(AppEnvironment);
+
+  constructor(private http: HttpClient) {}
 
   getAllRaces(): Observable<string[]> {
     return this.http

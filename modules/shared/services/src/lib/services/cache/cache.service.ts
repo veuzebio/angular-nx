@@ -1,16 +1,14 @@
 import { formatDate } from '@angular/common';
 import { Injectable } from '@angular/core';
-import { LoggerService } from '..';
-import { TimedCache } from '../../models';
+import { TimedCache } from '../../models/timed-cache';
+import { LoggerService } from '../logger/logger.service';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class CacheService {
   name = 'root';
   private cache = new Map<string, TimedCache>();
 
-  constructor(private logger: LoggerService) {
-    logger.prefix = 'Cache';
-  }
+  constructor(private logger: LoggerService) {}
 
   set<T>(
     key: string,
